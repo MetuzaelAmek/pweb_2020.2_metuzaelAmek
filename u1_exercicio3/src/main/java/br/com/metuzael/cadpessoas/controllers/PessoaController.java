@@ -17,12 +17,12 @@ public class PessoaController {
 
 	@Autowired
 	PessoaRepository pessoaRepo;
-	
+
 	@GetMapping
 	public String index() {
 		return "index.html";
 	}
-	
+
 	@GetMapping("/listarPessoas")
 	public ModelAndView listarPessoas() {
 		List<Pessoa> lista = pessoaRepo.findAll();
